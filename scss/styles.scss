@@ -19,6 +19,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    margin: 0;
+}
+
 main {
     width: 90%;
     padding: 40px;
@@ -27,4 +31,122 @@ main {
     margin-right: auto;
 }
 
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 20px;
+    row-gap: 20px;
 
+    &__label {
+        display: block;
+        font-weight: 700;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    &__grupo-input {
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        border-radius: 3px;
+        margin-bottom: 16px;
+        padding: 0 40px 0 10px;
+        transition: .3s ease all;
+        background-color: #fff;
+        border: 3px solid transparent;
+
+        &:focus {
+            outline: none;
+            border-color: #0075ff;
+            box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+        }
+    }
+
+    &__validacion-estado {
+        // opacity: 0;
+        right: 10px;
+        bottom: 31px;
+        z-index: 100;
+        font-size: 16px;
+        position: absolute;
+    }
+
+    &__input-error {
+        font-size: 12px;
+        display: none;
+    }
+
+    &__input-error--activo {
+        display: block;
+    }
+
+    &__checkbox {
+        margin-right: 10px;
+    }
+
+    &__mensaje,
+    &__grupo-terminos,
+    &__grupo--btn-enviar {
+        grid-column: span 2;
+    }
+
+    &__mensaje {
+        height: 45px;
+        padding: 0 15px;
+        line-height: 45px;
+        border-radius: 3px;
+        background-color: #f66060;
+
+        display: none;
+    }
+
+    &__mensaje--activo {
+        display: block;
+    }
+
+    &__grupo--btn-enviar {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__btn {
+        width: 30%;
+        height: 45px;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        line-height: 45px;
+        font-weight: bold;
+        border-radius: 3px;
+        margin-bottom: 16px;
+        background-color: #000;
+        transition: .1s ease all;
+
+        &:hover {
+            box-shadow: 3px 0px 30px rgba(163,163,163,1);
+        }
+    }
+
+    &__mensaje-exito {
+        font-size: 14px;
+        color: #119200;
+        display: none;
+    }
+
+    &__mensaje-exito--activo {
+        display: block;
+    }
+}
+
+
+
+/* -------- Estilos para validación --------- */
+
+.formulario {
+    
+}
